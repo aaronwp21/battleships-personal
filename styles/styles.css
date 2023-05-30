@@ -1,0 +1,204 @@
+/* font-family: 'Arvo', serif;
+font-family: 'Open Sans', sans-serif; */
+
+body {
+  background-color: hsl(202, 50%, 70%);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+  padding-block-start: 2rem;
+}
+
+.heading {
+  text-align: center;
+  margin-block-end: 6rem;
+  font-family: 'Arvo', serif;
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem 5rem;
+  margin-inline: 2rem;
+}
+
+.table-headers {
+  margin: 0;
+  align-self: end;
+  text-decoration: underline;
+}
+
+.table-headers:nth-child(1){
+  color: hsl(5, 60%, 32%);
+}
+
+.table-headers:nth-child(3) {
+  color: hsl(44, 94%, 25%);
+}
+
+.table-information {
+  font-size: 1.8rem;
+  margin: 0;
+  text-align: center;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.table-container {
+  width: 100%;
+  /* display: none; */
+}
+
+.table-container button {
+  position: relative;
+  width: 100%;
+  padding-block: 50%;
+  background-color: hsl(226, 24%, 45%);
+  border-radius: 10px;
+  box-shadow: -1px 2px 0px 0px;
+  cursor: pointer;
+}
+
+.table-container button:hover {
+  background-color: hsl(226, 24%, 35%);
+}
+
+.numbers {
+  font-size: 1.4rem;
+}
+
+.information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* overflow: auto; */
+  max-height: 400px;
+  gap: 5rem;
+}
+
+.information-container p {
+  max-height: 400px;
+  overflow: auto;
+  padding: 1em;
+  margin: 0;
+  text-align: center;
+}
+
+.information-container p:nth-child(2){
+  background-color: hsl(44, 94%, 50%);
+  border-radius: 10px;
+}
+
+.turn-container {
+  width: 100%;
+}
+
+.p1-turn {
+  background-color: hsl(5, 59%, 55%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.p2-turn {
+  background-color: hsl(44, 94%, 50%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 10px;
+}
+
+#player1 {
+  background-color: hsl(5, 59%, 55%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.remaining-ships-container {
+  display: flex;
+  gap: 4rem;
+}
+
+.reset-button-container {
+  width: 100%;
+  background-color: hsl(0, 0%, 50%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.reset-button-container:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.reset-button-container p {
+  color: hsl(0, 0%, 100%);
+}
+
+.winner-container-p1 {
+  width: 100%;
+  background-color: hsl(5, 59%, 55%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+.winner-container-p2 {
+  width: 100%;
+  background-color: hsl(44, 94%, 50%);
+  color: hsl(0, 0%, 0%);
+  border-radius: 10px;
+}
+
+.winner-text {
+  font-size: 2rem;
+}
+
+.fa-solid {
+  font-size: clamp(0.5rem, 1.5vw, 2rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: hsl(0, 0%, 100%);
+  /* display: none; */
+}
+
+.hide-ship {
+  display: none;
+}
+
+@media screen and (max-width: 975px) {
+  html {
+    font-size: 8px;
+  }
+  .main-wrapper {
+    grid-template-columns: 1fr;
+    margin-inline: 10rem;
+  }
+  .table-information {
+    order: 1;
+  }
+  #p1-table-header{
+    order: 2;
+  }
+  #player1-table {
+    order: 3;
+  }
+  .information-container {
+    order: 4;
+  }
+  #p2-table-header {
+    order: 5;
+  }
+  #player2-table {
+    order: 6;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .main-wrapper {
+    margin-inline: 2.5rem;
+  }
+}
